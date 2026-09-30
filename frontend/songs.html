@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Full-Stack Music Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="artists.html" class="nav-item">Artists</a>
+      <a href="albums.html" class="nav-item">Albums</a>
+      <a href="songs.html" class="nav-item active">Songs</a>
+    </nav>
+
+    <!-- Header -->
+
+    <button id="toggleBtn" class="theme-toggle">Toggle Theme</button>
+
+    <header class="pageHeader">
+      <h1>Songs</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- Container -->
+      <div class="container">
+
+        <form id="addForm">
+          <h3>Add New Song</h3>
+          <input type="text" id="name" placeholder="Song Name" required />
+          <input type="number" id="releaseYear" placeholder="Release Year" />
+          <input type="number" id="albumId" placeholder="Album ID" />
+          <button class="formBtn"type="submit">Create Song</button>
+        </form>
+
+        <form id="editForm" class="editForm">
+          <div class = editHeader>
+            <h3>Update Selected Song</h3>
+            <button id="closeEditForm">&times;</button>
+          </div>
+          <input type="text" id="editName" placeholder="Song Name" required />
+          <input type="number" id="editReleaseYear" placeholder="Release Year" />
+          <input type="number" id="editAlbumId" placeholder="Album ID" />
+          <button class="formBtn" type="submit">Update Song</button>
+        </form>
+        
+        <h2>My Songs</h2>
+
+        <table id="songTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Release Year</th>
+              <th>Album ID</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="songTableBody"></tbody>
+        </table>
+        
+        <div id="songList" class="cardList">
+          <!-- Songs will be dynamically inserted here -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        © 2026 Ciara Mee (23140241) | Maynooth University<br />Last updated: Sept 2026<br />This
+        page is for my Full-Stack Music Application.
+      </p>
+    </footer>
+    <script src="songs.js"></script>
+    <script src="theme.js"></script>
+  </body>
+</html>

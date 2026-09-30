@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Full-Stack Music Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="artists.html" class="nav-item active">Artists</a>
+      <a href="albums.html" class="nav-item">Albums</a>
+      <a href="songs.html" class="nav-item">Songs</a>
+    </nav>
+
+    <!-- Header -->
+
+    <button id="toggleBtn" class="theme-toggle">Light Mode</button>
+
+    <header class="pageHeader">
+      <h1>Artists</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- Container -->
+      <div class="container">
+
+        <form id="addForm">
+          <h3>Add New Artist</h3>
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="text" id="genre" placeholder="Genre" />
+          <input type="number" id="listeners" placeholder="Monthly Listeners" />
+          <button class="formBtn" type="submit">Create Artist</button>
+        </form>
+
+        <form id="editForm" class="editForm">
+          <div class="editHeader">
+            <h3>Update Selected Artist</h3>
+            <button id="closeEditForm">&times;</button>
+          </div>
+          <input type="text" id="editName" placeholder="Name" required />
+          <input type="text" id="editGenre" placeholder="Genre" />
+          <input
+            type="number"
+            id="editListeners"
+            placeholder="Monthly Listeners"
+          />
+          <button class="formBtn" type="submit">Update Artist</button>
+        </form>
+
+        <h2>My Artists</h2>
+
+        <table id="artistTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Genre</th>
+              <th>Monthly Listeners</th>
+              <th class="actions">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="artistTableBody"></tbody>
+        </table>
+
+        <div id="artistList" class="cardList">
+          <!-- Artists will be dynamically inserted here -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        © 2026 Ciara Mee (23140241) | Maynooth University<br />Last updated: Sept 2026<br />This
+        page is for my Full-Stack Music Application.
+      </p>
+    </footer>
+    <script src="artists.js"></script>
+    <script src="theme.js"></script>  
+  </body>
+</html>

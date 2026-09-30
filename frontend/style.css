@@ -1,0 +1,297 @@
+/* Global Page Styling */
+:root {
+  --bg-dark: hsl(324 44% 2%);
+  --bg: hsl(321 28% 5%);
+  --bg-light: hsl(322 16% 9%);
+  --text: hsl(323 100% 96%);
+  --text-muted: hsl(323 14% 71%);
+  --highlight: hsl(322 9% 40%);
+  --border: hsl(322 12% 29%);
+  --border-muted: hsl(321 17% 19%);
+  --primary: hsl(320 50% 73%);
+  --secondary: hsl(44, 100%, 50%);
+  --graygradient: linear-gradient(45deg, var(--bg-light), var(--bg));
+}
+
+/* Styles applied to the main page body */
+
+body.light {
+  --bg-dark: hsl(323 22% 90%);
+  --bg: hsl(323 49% 96%);
+  --bg-light: hsl(323 100% 100%);
+  --text: hsl(320 51% 5%);
+  --text-muted: hsl(322 12% 29%);
+  --highlight: hsl(322 22% 75%);
+  --border: hsl(322 11% 63%);
+  --border-muted: hsl(322 8% 52%); 
+  --primary: hsl(318 38% 30%);
+  --secondary: hsl(44, 64%, 33%);
+  --graygradient: linear-gradient(45deg, var(--bg-light), var(--bg));
+}
+
+.body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  background: var(--bg-dark);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Navigation Bar */
+
+/* Navigation bar container */
+.navbar {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 70px;
+  height: auto;
+  background: var(--bg);
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Individual nagivation links */
+.nav-item {
+  display: flex;
+  font-size: 24px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  width: auto;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  color: var(--primary);
+}
+
+/* Hover effect for navigation links */
+.nav-item:hover {
+  color: var(--secondary);
+}
+
+/* Style when link is clicked */
+.nav-item:active {
+  color: var(--secondary);
+}
+
+/* Style for current page you are on */
+.active {
+  color: var(--secondary);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 85px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background-color: var(--text-muted);
+}
+
+/* Page Header */
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--bg-dark);
+}
+
+/* Main */
+.main {
+  flex: 1;
+}
+
+/* Container */
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  min-height: 100%;
+  height: auto;
+  padding: 15px;
+  gap: 20px;
+}
+
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+/* .card {
+  border: 2px solid #222222;
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+} */
+
+/* .card_name {
+  text-decoration: underline rgb(255, 50, 50);
+  cursor: pointer;
+}
+
+.card_name:hover {
+  color: rgb(255, 50, 50);
+} */
+
+.editForm {
+  display: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-top: 1px solid var(--highlight);
+  width: 100%;
+  background: var(--graygradient);
+}
+
+th, td {
+  padding: 6px;
+  border-bottom: 1px solid var(--border-muted);
+  height: 20px;
+}
+
+td {
+  height: 20px;
+  text-align: center;
+}
+
+
+.actions{
+  width: 245px;
+}
+
+input{
+  /* width: 24%; */
+  padding: 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid var(--primary);
+}
+
+input:focus {
+  border: 2px solid var(--secondary);
+  outline: none;
+}
+
+input:hover{
+  border: 2px solid var(--secondary);
+}
+
+#addForm {
+  padding: 12px;
+  margin: 10px 0;
+  width: fit-content;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-top: 1px solid var(--highlight);
+  border-bottom: 1px solid var(--border-muted);
+  background: var(--graygradient);
+}
+
+#editForm {
+  padding: 12px;
+  margin: 10px 0;
+  width: fit-content;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-top: 1px solid var(--highlight);
+  border-bottom: 1px solid var(--border-muted);
+  background: var(--graygradient);
+}
+
+.formBtn{
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  color: var(--bg-dark);
+  padding: 12px;
+  margin: 10px 0;
+  /* width: 24%; */
+  box-sizing: border-box;
+}
+
+.formBtn:hover {
+  background-color: var(--secondary);
+  border: 2px solid var(--secondary);
+  cursor: pointer;
+}
+
+/* Button Colors */
+.btn {
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  color: var(--bg-dark);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 0;
+  width: 120px;
+}
+
+/* Button Hover */
+.btn:hover {
+  background-color: var(--secondary);
+  border: 2px solid var(--secondary);
+  cursor: pointer;
+}
+
+#closeEditForm {
+  background-color: #e02755;
+  border: 2px solid #e02755;
+  color: var(--bg-dark);
+  padding: 3px;
+  margin: 0;
+  width: 25px;
+}
+
+#closeEditForm:hover {
+  background-color: var(--secondary);
+  border: 2px solid var(--secondary);
+}
+
+.editHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: var(--bg);
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  font-style: italic;
+  padding: 5px;
+}

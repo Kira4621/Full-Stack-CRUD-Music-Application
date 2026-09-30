@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Full-Stack Music Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="artists.html" class="nav-item">Artists</a>
+      <a href="albums.html" class="nav-item active">Albums</a>
+      <a href="songs.html" class="nav-item">Songs</a>
+    </nav>
+
+    <!-- Header -->
+
+    <button id="toggleBtn" class="theme-toggle">Toggle Theme</button>
+
+    <header class="pageHeader">
+      <h1>Albums</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- Container -->
+      <div class="container">
+        
+        <form id="addForm">
+          <h3>Add New Album</h3>
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="text" id="releaseYear" placeholder="Release Year" />
+          <input type="number" id="listens" placeholder="Number of Listens" />
+          <input type="number" id="artistId" placeholder="Artist ID" />
+          <button class="formBtn"type="submit">Create Album</button>
+        </form>
+
+        <form id="editForm" class="editForm">
+          <div class = editHeader>
+            <h3>Update Selected Album</h3>
+            <button id="closeEditForm">&times;</button>
+          </div>
+          <input type="text" id="editName" placeholder="Name" required />
+          <input type="text" id="editReleaseYear" placeholder="Release Year" />
+          <input type="number" id="editListens" placeholder="Number of Listens" />
+          <input type="number" id="editArtistId" placeholder="Artist ID" />
+          <button class="formBtn" type="submit">Update Album</button>
+        </form>
+        
+        <h2>My Albums</h2>
+
+        <table id="albumTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Release Year</th>
+              <th>Number of Listens</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="albumTableBody"></tbody>
+        </table>
+
+        <div id="albumList" class="cardList">
+          <!-- Albums will be dynamically inserted here -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        © 2026 Ciara Mee (23140241) | Maynooth University<br />Last updated: Sept 2026<br />This
+        page is for my Full-Stack Music Application.
+      </p>
+    </footer>
+    <script src="albums.js"></script>
+    <script src="theme.js"></script>
+  </body>
+</html>
